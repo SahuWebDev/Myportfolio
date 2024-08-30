@@ -48,9 +48,9 @@ window.addEventListener('scroll', scrollActive);
 window.onscroll = function() {
     let moveTopBtn = document.getElementById("back-to-top");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        moveTopBtn.style.display = "inline-block";  // Show the button with inline-block to match the social icons
+        moveTopBtn.style.display = "inline-flex";  // Changed to inline-flex to maintain alignment styles
     } else {
-        moveTopBtn.style.display = "none";  // Hide the button when near the top of the page
+        moveTopBtn.style.display = "none";
     }
 };
 
@@ -59,6 +59,7 @@ document.getElementById("back-to-top").onclick = function() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 };
+
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
@@ -115,4 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+function newFunction() {
+    return "back-to-top";
+}
 
