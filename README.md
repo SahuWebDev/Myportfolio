@@ -28,19 +28,11 @@ Welcome to my Dynamic Portfolio project! This portfolio showcases my skills, exp
    ```bash
    cd your-portfolio
    ```
-3. **Create a database:**
-   - Use MySQL to create a new database for the portfolio.
-   - Import the provided SQL file (`database.sql`) into your database.
-
-4. **Configure the environment:**
-   - Rename `.env.example` to `.env`.
-   - Update the database credentials in the `.env` file.
-
-5. **Setup PHPMailer:**
+3. **Setup PHPMailer:**
    - Configure PHPMailer settings in the `mailer_config.php` file.
    - Update the SMTP server details, username, and password.
 
-6. **Run the project:**
+4. **Run the project:**
    - Place the project files in your server's root directory (e.g., `htdocs` for XAMPP).
    - Access the portfolio via your web browser at `http://localhost/your-portfolio`.
 
