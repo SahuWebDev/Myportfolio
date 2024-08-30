@@ -22,19 +22,19 @@ Welcome to my Dynamic Portfolio project! This portfolio showcases my skills, exp
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/your-portfolio.git
+   git clone https://github.com/SahuWebDev/Myportfolio.git
    ```
 2. **Navigate to the project directory:**
    ```bash
-   cd your-portfolio
+   unzip the code and remember to run via xampp and copy the folder to xampp/hotdocs/Myportfolio
    ```
 3. **Setup PHPMailer:**
-   - Configure PHPMailer settings in the `mailer_config.php` file.
+   - Configure PHPMailer settings in the `mailer.php` file.
    - Update the SMTP server details, username, and password.
 
 4. **Run the project:**
    - Place the project files in your server's root directory (e.g., `htdocs` for XAMPP).
-   - Access the portfolio via your web browser at `http://localhost/your-portfolio`.
+   - Access the portfolio via your web browser at `http://localhost/Myportfolio`.
 
 ## Usage
 
@@ -56,8 +56,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or feedback, feel free to reach out via the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/yourprofile).
+If you have any questions or feedback, feel free to reach out via the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/in/ashisha-kumar-sahu-46aa32209).
 
 ---
 
-Feel free to customize this README with your specific details!
+
