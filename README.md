@@ -26,7 +26,7 @@ Welcome to my Dynamic Portfolio project! This portfolio showcases my skills, exp
    ```
 2. **Navigate to the project directory:**
    ```bash
-   cd your-portfolio
+   unzip the code and remember to run via xampp and copy the folder to xampp/hotdocs/Myportfolio
    ```
 3. **Setup PHPMailer:**
    - Configure PHPMailer settings in the `mailer.php` file.
@@ -60,4 +60,4 @@ If you have any questions or feedback, feel free to reach out via the contact fo
 
 ---
 
-Feel free to customize this README with your specific details!
+
