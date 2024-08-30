@@ -42,6 +42,24 @@ const scrollActive = () => {
 };
 window.addEventListener('scroll', scrollActive);
 
+/*============= move top button ===========*/
+
+// Show the button when scrolled down 100px from the top
+window.onscroll = function() {
+    let moveTopBtn = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        moveTopBtn.style.display = "inline-block";  // Show the button with inline-block to match the social icons
+    } else {
+        moveTopBtn.style.display = "none";  // Hide the button when near the top of the page
+    }
+};
+
+// Scroll to top when the button is clicked
+document.getElementById("back-to-top").onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',

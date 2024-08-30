@@ -233,7 +233,37 @@ img {
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
+/* Move to Top Button Styles */
+html{
+  scroll-behavior: smooth;
+}
 
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right:2rem;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(64, 64, 211);
+  border-radius: 0.5 rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+.back-to-top span{
+  color: white ;
+  font-size: 3rem;
+  transition: 0.2 ease-out;
+
+}
+.back-to-top:hover{
+  background-color: #1b21cc;
+}
+.back-to-top:hover span{
+  transform: translateY(-4px);
+}
+  
 /* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
@@ -378,8 +408,6 @@ img {
   background-color: #f8d7da;
   color: #721c24;
 }
-
-
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
@@ -427,6 +455,17 @@ img {
     margin-bottom: 0;
     margin-right: var(--mb-4);
   }
+  /*========== section for move top===========*/
+  .home__social-icon {
+    font-size: 30px;   /* Example size, adjust as needed */
+    color: #282edb;       /* Icon color */
+    margin-right: 20px; /* Space between icons */
+    cursor: pointer;   /* Pointer cursor on hover */
+}
+
+#moveTopBtn {
+    display: none; /* Initially hidden, will be shown on scroll */
+}
   .home__img {
     width: 300px;
     bottom: 25%;
