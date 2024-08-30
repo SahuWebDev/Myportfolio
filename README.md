@@ -56,7 +56,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or feedback, feel free to reach out via the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/yourprofile).
+If you have any questions or feedback, feel free to reach out via the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/in/ashisha-kumar-sahu-46aa32209).
 
 ---
 
