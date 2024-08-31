@@ -1,13 +1,16 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 require 'PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
+require 'vendor/autoload.php';
 
-// Load SMTP credentials from the config file
-$config = require 'config.php';
+// Load the .env file
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $responseMessage = '';
 $responseType = '';
@@ -21,12 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $mail->isSMTP();
-        $mail->Host = $config['smtp_host'];   
+        $mail->Host = $_ENV['SMTP_HOST'];   
         $mail->SMTPAuth = true;
-        $mail->Username = $config['smtp_username'];
-        $mail->Password = $config['smtp_password'];
-        $mail->SMTPSecure = $config['smtp_secure'];
-        $mail->Port = $config['smtp_port'];
+        $mail->Username = $_ENV['SMTP_USER'];
+        $mail->Password = $_ENV['SMTP_PASS'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port = $_ENV['SMTP_PORT'];
 
         $mail->setFrom($email, $name);
         $mail->addAddress('ashishakumarsahu@gmail.com');
@@ -45,8 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
