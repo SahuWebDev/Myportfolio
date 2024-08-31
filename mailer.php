@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = $config['smtp_port'];
 
         $mail->setFrom($email, $name);
-        $mail->addAddress('ashishakumarsahu@example.com');
+        $mail->addAddress('ashishakumarsahu@gmail.com');
 
         $mail->isHTML(false);
         $mail->Subject = "New Contact Form Submission from $name";
