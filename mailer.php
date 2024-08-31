@@ -6,6 +6,9 @@ require 'PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
+// Load SMTP credentials from the config file
+$config = require 'config.php';
+
 $responseMessage = '';
 $responseType = '';
 
@@ -18,15 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = $config['smtp_host'];   
         $mail->SMTPAuth = true;
-        $mail->Username = 'asishnsdl@gmail.com';
-        $mail->Password = 'kjqr qkbh fzsr jyfs';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port = 465;
+        $mail->Username = $config['smtp_username'];
+        $mail->Password = $config['smtp_password'];
+        $mail->SMTPSecure = $config['smtp_secure'];
+        $mail->Port = $config['smtp_port'];
 
         $mail->setFrom($email, $name);
-        $mail->addAddress('ashishakumarsahu@gmail.com');
+        $mail->addAddress('ashishakumarsahu@example.com');
 
         $mail->isHTML(false);
         $mail->Subject = "New Contact Form Submission from $name";
@@ -42,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
